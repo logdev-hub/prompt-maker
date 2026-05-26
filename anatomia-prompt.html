@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anatomia do Prompt | Planejador Pedagógico Maker</title>
+  <meta name="description" content="Anatomia do Prompt Mestre em modo resumido e completo, com técnicas usadas e motivos de cada escolha.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="senac-stripe fixed-top"></div>
+
+  <nav class="navbar navbar-expand-lg fixed-top mt-1 app-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span class="brand-badge">🧰</span> Maker Pedagógico</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">1. Como funciona</a></li>
+          <li class="nav-item"><a class="nav-link" href="prompt-mestre.html">2. Prompt Mestre</a></li>
+          <li class="nav-item"><a class="nav-link" href="comandos.html">3. Comandos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="anatomia-prompt.html">4. Anatomia</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <section class="section-panel">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="eyebrow">🔬 Parte 4</span>
+          <h1 class="page-title">Anatomia do Prompt</h1>
+          <p>O Prompt Mestre foi dividido em blocos funcionais. A leitura resumida mostra a arquitetura geral; a leitura completa explica técnica, motivo e risco que cada bloco reduz.</p>
+        </div>
+
+        <ul class="nav anatomy-tabs justify-content-center mb-4" id="anatomiaTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="resumido-tab" data-bs-toggle="tab" data-bs-target="#resumido" type="button" role="tab" aria-controls="resumido" aria-selected="true">⚡ Modo resumido</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="completo-tab" data-bs-toggle="tab" data-bs-target="#completo" type="button" role="tab" aria-controls="completo" aria-selected="false">📚 Modo completo</button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <section class="tab-pane fade show active" id="resumido" role="tabpanel" aria-labelledby="resumido-tab" tabindex="0">
+            <div class="row g-4">
+              <div class="col-md-6 col-xl-3">
+                <article class="soft-card anatomy-card">
+                  <span class="anatomy-number">01</span>
+                  <h2 class="h5 fw-bold">Papel e especialidade</h2>
+                  <p><strong>Técnica:</strong> definição de papel e competências do assistente.</p>
+                  <p><strong>Por quê:</strong> orienta tom, escopo e tipo de decisão pedagógica esperada.</p>
+                </article>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <article class="soft-card anatomy-card">
+                  <span class="anatomy-number">02</span>
+                  <h2 class="h5 fw-bold">Entrada obrigatória</h2>
+                  <p><strong>Técnica:</strong> bloqueio de início por documentos mínimos.</p>
+                  <p><strong>Por quê:</strong> evita respostas baseadas em histórico, memória ou suposições.</p>
+                </article>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <article class="soft-card anatomy-card">
+                  <span class="anatomy-number">03</span>
+                  <h2 class="h5 fw-bold">Fonte de verdade</h2>
+                  <p><strong>Técnica:</strong> grounding no plano de curso e na lista de materiais.</p>
+                  <p><strong>Por quê:</strong> mantém competências, indicadores e recursos aderentes aos documentos.</p>
+                </article>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <article class="soft-card anatomy-card">
+                  <span class="anatomy-number">04</span>
+                  <h2 class="h5 fw-bold">Fluxo por etapas</h2>
+                  <p><strong>Técnica:</strong> decomposição do trabalho em leitura, diagnóstico, parâmetros e geração.</p>
+                  <p><strong>Por quê:</strong> reduz confusão e torna a conversa mais controlável.</p>
+                </article>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <article class="soft-card anatomy-card">
+                  <span class="anatomy-number">05</span>
+                  <h2 class="h5 fw-bold">Perguntas limitadas</h2>
+                  <p><strong>Técnica:</strong> parametrização com no máximo oito perguntas por rodada.</p>
+                  <p><strong>Por quê:</strong> coleta dados sem sobrecarregar o docente.</p>
+                </article>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <article class="soft-card anatomy-card">
+                  <span class="anatomy-number">06</span>
+                  <h2 class="h5 fw-bold">Saída estruturada</h2>
+                  <p><strong>Técnica:</strong> tabelas, listas e seções obrigatórias.</p>
+                  <p><strong>Por quê:</strong> deixa a resposta comparável, auditável e pronta para uso.</p>
+                </article>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <article class="soft-card anatomy-card">
+                  <span class="anatomy-number">07</span>
+                  <h2 class="h5 fw-bold">Comandos textuais</h2>
+                  <p><strong>Técnica:</strong> interface conversacional por menu.</p>
+                  <p><strong>Por quê:</strong> dá ao docente atalhos para revisar, gerar, detalhar e ajustar.</p>
+                </article>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <article class="soft-card anatomy-card">
+                  <span class="anatomy-number">08</span>
+                  <h2 class="h5 fw-bold">Checklist interno</h2>
+                  <p><strong>Técnica:</strong> autocheck antes da resposta final.</p>
+                  <p><strong>Por quê:</strong> força revisão de aderência, segurança, evidências e materiais.</p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-pane fade" id="completo" role="tabpanel" aria-labelledby="completo-tab" tabindex="0">
+            <div class="accordion anatomy-accordion" id="accordionAnatomia">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#parte1" aria-expanded="true" aria-controls="parte1">01 · Identidade do assistente</button>
+                </h2>
+                <div id="parte1" class="accordion-collapse collapse show" data-bs-parent="#accordionAnatomia">
+                  <div class="accordion-body">
+                    <p><strong>Trecho:</strong> "Você é um Assistente de Planejamento Pedagógico Maker..."</p>
+                    <p><strong>Técnicas usadas:</strong> definição de papel, delimitação de domínio e especialização composta.</p>
+                    <p><strong>Por quê:</strong> a IA recebe uma função clara e passa a responder como planejador pedagógico, especialista técnico, mediador maker e curador de recursos.</p>
+                    <p><strong>Risco mitigado:</strong> respostas genéricas, tom inadequado ou foco excessivo em criatividade sem valor profissional.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#parte2" aria-expanded="false" aria-controls="parte2">02 · Regra de início e isolamento de contexto</button>
+                </h2>
+                <div id="parte2" class="accordion-collapse collapse" data-bs-parent="#accordionAnatomia">
+                  <div class="accordion-body">
+                    <p><strong>Trecho:</strong> "Trate toda conversa como uma nova execução" e "Não use memória, histórico..."</p>
+                    <p><strong>Técnicas usadas:</strong> reset de contexto, restrição explícita de memória e validação de insumos mínimos.</p>
+                    <p><strong>Por quê:</strong> garante que o planejamento use documentos presentes na conversa atual, não informações lembradas, inferidas ou trazidas de outro ambiente.</p>
+                    <p><strong>Risco mitigado:</strong> continuidade falsa, uso de arquivo inexistente, personalização indevida e proposta desalinhada ao plano real.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#parte3" aria-expanded="false" aria-controls="parte3">03 · Primeira resposta obrigatória</button>
+                </h2>
+                <div id="parte3" class="accordion-collapse collapse" data-bs-parent="#accordionAnatomia">
+                  <div class="accordion-body">
+                    <p><strong>Trecho:</strong> "Para iniciar este planejamento, envie ou anexe nesta conversa..."</p>
+                    <p><strong>Técnicas usadas:</strong> script inicial, gate de entrada e instrução de fallback.</p>
+                    <p><strong>Por quê:</strong> padroniza o começo da interação e reduz a chance de a IA sair gerando atividade antes de ter base documental.</p>
+                    <p><strong>Risco mitigado:</strong> falta de plano de curso, falta de lista de materiais e início desorganizado da conversa.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#parte4" aria-expanded="false" aria-controls="parte4">04 · Regras obrigatórias</button>
+                </h2>
+                <div id="parte4" class="accordion-collapse collapse" data-bs-parent="#accordionAnatomia">
+                  <div class="accordion-body">
+                    <p><strong>Trecho:</strong> "Use o plano de curso como fonte principal" e "Gere no mínimo três possibilidades..."</p>
+                    <p><strong>Técnicas usadas:</strong> hierarquia de regras, restrições negativas e critérios mínimos de entrega.</p>
+                    <p><strong>Por quê:</strong> define o que é obrigatório, o que deve ser evitado e quais elementos tornam uma proposta aceitável.</p>
+                    <p><strong>Risco mitigado:</strong> criação de competências inventadas, compras desnecessárias, propostas decorativas e ausência de avaliação.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#parte5" aria-expanded="false" aria-controls="parte5">05 · Procedimento de leitura dos documentos</button>
+                </h2>
+                <div id="parte5" class="accordion-collapse collapse" data-bs-parent="#accordionAnatomia">
+                  <div class="accordion-body">
+                    <p><strong>Trecho:</strong> "Ao ler o plano de curso, extraia..." e "Ao ler a lista de materiais, normalize..."</p>
+                    <p><strong>Técnicas usadas:</strong> checklist de extração, normalização de dados e categorização.</p>
+                    <p><strong>Por quê:</strong> transforma documentos longos ou pouco padronizados em campos úteis para planejamento pedagógico.</p>
+                    <p><strong>Risco mitigado:</strong> leitura superficial, perda de indicadores importantes e uso inadequado dos materiais disponíveis.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#parte6" aria-expanded="false" aria-controls="parte6">06 · Perguntas de parametrização</button>
+                </h2>
+                <div id="parte6" class="accordion-collapse collapse" data-bs-parent="#accordionAnatomia">
+                  <div class="accordion-body">
+                    <p><strong>Trecho:</strong> "Pergunte apenas o que ainda for necessário, usando no máximo oito perguntas por rodada."</p>
+                    <p><strong>Técnicas usadas:</strong> coleta progressiva, limite de carga cognitiva e premissas declaradas.</p>
+                    <p><strong>Por quê:</strong> a IA coleta dados essenciais sem transformar o planejamento em um interrogatório longo.</p>
+                    <p><strong>Risco mitigado:</strong> excesso de perguntas, abandono do fluxo e decisões escondidas sem transparência.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#parte7" aria-expanded="false" aria-controls="parte7">07 · Comandos de navegação</button>
+                </h2>
+                <div id="parte7" class="accordion-collapse collapse" data-bs-parent="#accordionAnatomia">
+                  <div class="accordion-body">
+                    <p><strong>Trecho:</strong> "/iniciar", "/diagnostico", "/gerar", "/detalhar N", "/rubrica"...</p>
+                    <p><strong>Técnicas usadas:</strong> command menu, estado conversacional e ações nomeadas.</p>
+                    <p><strong>Por quê:</strong> cria uma interface simples para o docente controlar a IA por etapas previsíveis.</p>
+                    <p><strong>Risco mitigado:</strong> conversas longas sem direção, perda do ponto atual e retrabalho de instruções.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#parte8" aria-expanded="false" aria-controls="parte8">08 · Formato para gerar possibilidades</button>
+                </h2>
+                <div id="parte8" class="accordion-collapse collapse" data-bs-parent="#accordionAnatomia">
+                  <div class="accordion-body">
+                    <p><strong>Trecho:</strong> "Tabela obrigatória: Opção, Artefato maker, Competência/UC..."</p>
+                    <p><strong>Técnicas usadas:</strong> esquema de saída, comparação lado a lado e critérios de completude.</p>
+                    <p><strong>Por quê:</strong> obriga a IA a entregar propostas comparáveis e facilita a escolha do docente.</p>
+                    <p><strong>Risco mitigado:</strong> opções vagas, variações superficiais e ausência de materiais, tempo ou valor pedagógico.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#parte9" aria-expanded="false" aria-controls="parte9">09 · Formato para detalhar uma opção</button>
+                </h2>
+                <div id="parte9" class="accordion-collapse collapse" data-bs-parent="#accordionAnatomia">
+                  <div class="accordion-body">
+                    <p><strong>Trecho:</strong> "Identificação, Situação-problema, Objetivos, Materiais, Procedimento..."</p>
+                    <p><strong>Técnicas usadas:</strong> template de entrega, sequência operacional e avaliação por evidências.</p>
+                    <p><strong>Por quê:</strong> converte uma ideia em plano executável, com mediação, tempo, avaliação, segurança e entregáveis.</p>
+                    <p><strong>Risco mitigado:</strong> atividade interessante mas inviável, sem roteiro para docente ou sem critério de avaliação.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#parte10" aria-expanded="false" aria-controls="parte10">10 · Checklist interno de qualidade</button>
+                </h2>
+                <div id="parte10" class="accordion-collapse collapse" data-bs-parent="#accordionAnatomia">
+                  <div class="accordion-body">
+                    <p><strong>Trecho:</strong> "Antes de entregar qualquer proposta, verifique..."</p>
+                    <p><strong>Técnicas usadas:</strong> autocorreção, lista de conformidade e revisão antes da resposta.</p>
+                    <p><strong>Por quê:</strong> cria uma última barreira contra respostas incompletas, inseguras ou desalinhadas ao plano.</p>
+                    <p><strong>Risco mitigado:</strong> omissão de evidências, segurança, acessibilidade, materiais ou conexão com competência profissional.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+      <a class="btn btn-light rounded-pill fw-bold" href="comandos.html">← Comandos</a>
+      <a class="btn btn-light rounded-pill fw-bold" href="index.html">Voltar ao início ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

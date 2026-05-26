@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comandos | Planejador Pedagógico Maker</title>
+  <meta name="description" content="Manual de comandos do Planejador Pedagógico Maker com exemplos copiáveis.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="senac-stripe fixed-top"></div>
+
+  <nav class="navbar navbar-expand-lg fixed-top mt-1 app-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span class="brand-badge">🧰</span> Maker Pedagógico</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">1. Como funciona</a></li>
+          <li class="nav-item"><a class="nav-link" href="prompt-mestre.html">2. Prompt Mestre</a></li>
+          <li class="nav-item"><a class="nav-link active" href="comandos.html">3. Comandos</a></li>
+          <li class="nav-item"><a class="nav-link" href="anatomia-prompt.html">4. Anatomia</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <section class="section-panel">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="eyebrow">⌨️ Parte 3</span>
+          <h1 class="page-title">Comandos: manual com exemplos</h1>
+          <p>Clique em qualquer comando para copiá-lo. Use os exemplos para conduzir a conversa com a IA por etapas, sem reescrever instruções longas.</p>
+        </div>
+
+        <div class="workflow-box mb-4">
+          <div class="row g-4 align-items-center position-relative">
+            <div class="col-lg-7">
+              <h2 class="h4 fw-bold">Sequência recomendada ✅</h2>
+              <p class="command-sequence mb-0">/iniciar → /diagnostico → /parametros → /gerar → /comparar → /detalhar 1 → /rubrica</p>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+              <button class="btn btn-light rounded-pill fw-bold" type="button" id="btnCopiarSequencia">📋 Copiar sequência</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3" id="commandGrid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+      <a class="btn btn-light rounded-pill fw-bold" href="prompt-mestre.html">← Prompt Mestre</a>
+      <a class="btn btn-light rounded-pill fw-bold" href="anatomia-prompt.html">Próxima página: Anatomia →</a>
+    </div>
+  </footer>
+
+  <div class="copy-toast" id="toast" role="status" aria-live="polite">✅ Copiado para a área de transferência</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

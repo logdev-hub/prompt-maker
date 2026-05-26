@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prompt Mestre | Planejador Pedagógico Maker</title>
+  <meta name="description" content="Formulário para gerar o Prompt Mestre do Planejador Pedagógico Maker.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="senac-stripe fixed-top"></div>
+
+  <nav class="navbar navbar-expand-lg fixed-top mt-1 app-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span class="brand-badge">🧰</span> Maker Pedagógico</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">1. Como funciona</a></li>
+          <li class="nav-item"><a class="nav-link active" href="prompt-mestre.html">2. Prompt Mestre</a></li>
+          <li class="nav-item"><a class="nav-link" href="comandos.html">3. Comandos</a></li>
+          <li class="nav-item"><a class="nav-link" href="anatomia-prompt.html">4. Anatomia</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <section class="section-panel">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="eyebrow">🧠 Parte 2</span>
+          <h1 class="page-title">Prompt Mestre</h1>
+          <p>Preencha os parâmetros conhecidos. Se faltar informação, mantenha "inferir pelo plano" para a IA usar o documento como fonte principal e declarar as premissas.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-5">
+            <form class="soft-card tool-form" id="promptForm">
+              <div class="mini-status">📌 Toda nova conversa deve solicitar ou confirmar o plano de curso e a lista de materiais.</div>
+
+              <div class="mb-3">
+                <label class="form-label fw-bold" for="tema">Tema da aula</label>
+                <input class="form-control" id="tema" value="Equipamentos de movimentação de materiais: funcionamento e finalidades">
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-bold" for="curso">Curso/área</label>
+                  <input class="form-control" id="curso" value="Técnico em Logística">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-bold" for="uc">UC/competência</label>
+                  <input class="form-control" id="uc" value="UC1: Organizar e controlar sistemas de armazenagem">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-bold" for="tempo">Tempo disponível</label>
+                  <input class="form-control" id="tempo" value="2 horas">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-bold" for="turma">Tamanho da turma</label>
+                  <input class="form-control" id="turma" value="26 estudantes">
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <label class="form-label fw-bold" for="indicadores">Indicadores, habilidades, atitudes e valores</label>
+                <textarea class="form-control" id="indicadores" rows="3">inferir pelo plano</textarea>
+              </div>
+
+              <div class="row g-3 mt-1">
+                <div class="col-md-6">
+                  <label class="form-label fw-bold" for="formato">Formato</label>
+                  <select class="form-select" id="formato">
+                    <option selected>Presencial</option>
+                    <option>Híbrido</option>
+                    <option>A distância</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-bold" for="preferencia">Preferência maker</label>
+                  <select class="form-select" id="preferencia">
+                    <option selected>Sem eletrônica</option>
+                    <option>Com eletrônica/programação</option>
+                    <option>Protótipo físico simples</option>
+                    <option>Jogo ou simulação</option>
+                    <option>Baixo custo</option>
+                    <option>Tanto faz</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <label class="form-label fw-bold" for="restricoes">Restrições</label>
+                <textarea class="form-control" id="restricoes" rows="3">Sala de aula comum, sem uso de eletrônica, com montagem simples e controle de segurança.</textarea>
+              </div>
+
+              <div class="mt-3">
+                <label class="form-label fw-bold" for="integracao">Integração desejada</label>
+                <input class="form-control" id="integracao" value="Projeto Integrador, avaliação formativa e registro em portfólio">
+              </div>
+
+              <div class="copy-row mt-4">
+                <button class="btn btn-senac" type="button" id="btnPromptCompleto">✨ Gerar prompt completo</button>
+                <button class="btn btn-outline-senac" type="button" id="btnPromptMestre">🧠 Ver mestre</button>
+                <button class="btn btn-outline-senac" type="button" id="btnBriefing">📝 Só briefing</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="soft-card output-shell h-100">
+              <div class="output-header">
+                <div>
+                  <span class="eyebrow compact" id="saidaTipo">Prompt completo</span>
+                  <h2 class="h4 fw-bold mb-0" id="saidaTitulo">Prompt Mestre + parâmetros da aula</h2>
+                </div>
+                <button class="btn btn-outline-senac btn-sm" type="button" id="btnCopiarSaida">📋 Copiar</button>
+              </div>
+              <pre class="output-box" id="saida" tabindex="0">Clique em "Gerar prompt completo" para montar sua solicitação.</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+      <a class="btn btn-light rounded-pill fw-bold" href="index.html">← Como funciona</a>
+      <a class="btn btn-light rounded-pill fw-bold" href="comandos.html">Próxima página: Comandos →</a>
+    </div>
+  </footer>
+
+  <div class="copy-toast" id="toast" role="status" aria-live="polite">✅ Copiado para a área de transferência</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
